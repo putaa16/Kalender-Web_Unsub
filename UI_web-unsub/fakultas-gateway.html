@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Universitas Subang - Membentuk Pemimpin Masa Depan</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "tertiary": "#460000",
+                        "inverse-primary": "#a7c8ff",
+                        "secondary-fixed": "#ffe088",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "outline": "#737780",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#001b3c",
+                        "on-surface-variant": "#43474f",
+                        "secondary": "#735c00",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#799dd6",
+                        "on-tertiary-fixed-variant": "#8f0f07",
+                        "surface-container": "#eeeeee",
+                        "outline-variant": "#c3c6d1",
+                        "surface-container-low": "#f3f3f3",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fed65b",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "primary": "#001e40",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-container": "#ff6d59",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdad4",
+                        "primary-fixed": "#d5e3ff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-error": "#ffffff",
+                        "primary-container": "#003366",
+                        "surface-tint": "#3a5f94",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-container": "#6e0000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["\"Source Serif 4\""],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "body-md": ["Inter"],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "display-lg": ["\"Source Serif 4\""],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+
+    <!-- Page Loader -->
+    <div id="page-loader" class="fixed inset-0 z-[100] grid place-items-center bg-surface transition-opacity duration-500 dark:bg-inverse-surface">
+        <div class="flex flex-col items-center gap-4 text-center">
+            <div class="h-14 w-14 animate-spin rounded-full border-4 border-primary/20 border-t-primary dark:border-primary-fixed/20 dark:border-t-primary-fixed"></div>
+            <p class="text-base font-bold uppercase tracking-[0.24em] text-primary dark:text-primary-fixed">Memuat Portal UNSUB</p>
+        </div>
+    </div>
+
+    <!-- Search Modal with Chips -->
+    <div id="search-modal" class="fixed inset-0 z-[90] hidden bg-black/60 px-4 py-20 backdrop-blur-sm sm:px-6 lg:px-8" role="dialog" aria-modal="true">
+        <div class="mx-auto w-full max-w-3xl rounded-xl bg-surface-container-lowest p-6 shadow-md dark:bg-inverse-surface sm:p-8">
+            <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-primary dark:text-primary-fixed">Cari di Universitas Subang</h2>
+                    <p class="mt-1 text-sm text-on-surface-variant dark:text-outline">Masukkan kata kunci atau pilih saran di bawah ini.</p>
+                </div>
+                <button id="search-close-btn" type="button" class="grid h-10 w-10 place-items-center rounded-full bg-surface-container hover:bg-surface-container-high transition text-on-surface dark:bg-surface-variant dark:text-on-surface-variant">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="mt-6">
+                <div class="flex gap-2">
+                    <input id="search-input" type="search" placeholder="Ketik kata kunci pencarian..." class="w-full rounded-lg border-outline-variant bg-surface px-5 py-3 text-on-surface focus:border-primary focus:ring-primary dark:bg-surface-container dark:text-on-surface dark:border-outline" />
+                    <button id="search-submit-btn" type="button" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 font-bold text-on-primary transition hover:bg-primary/90">
+                        Cari
+                    </button>
+                </div>
+                <!-- Search Chips -->
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <button type="button" class="search-chip rounded-full border border-outline-variant px-3 py-1 text-xs font-bold text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors dark:border-outline dark:text-outline dark:hover:bg-surface-variant dark:hover:text-primary-fixed" data-keyword="Pendaftaran">Pendaftaran</button>
+                    <button type="button" class="search-chip rounded-full border border-outline-variant px-3 py-1 text-xs font-bold text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors dark:border-outline dark:text-outline dark:hover:bg-surface-variant dark:hover:text-primary-fixed" data-keyword="Beasiswa">Beasiswa</button>
+                    <button type="button" class="search-chip rounded-full border border-outline-variant px-3 py-1 text-xs font-bold text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors dark:border-outline dark:text-outline dark:hover:bg-surface-variant dark:hover:text-primary-fixed" data-keyword="Fakultas Teknik">Fakultas Teknik</button>
+                    <button type="button" class="search-chip rounded-full border border-outline-variant px-3 py-1 text-xs font-bold text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors dark:border-outline dark:text-outline dark:hover:bg-surface-variant dark:hover:text-primary-fixed" data-keyword="Riset">Riset</button>
+                    <button type="button" class="search-chip rounded-full border border-outline-variant px-3 py-1 text-xs font-bold text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors dark:border-outline dark:text-outline dark:hover:bg-surface-variant dark:hover:text-primary-fixed" data-keyword="Berita Terbaru">Berita Terbaru</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal Styled as Stitch -->
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6" aria-labelledby="contact-modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" aria-hidden="true" onclick="closeContactModal()"></div>
+        <div class="relative z-10 w-full max-w-xl overflow-hidden rounded-[2.5rem] bg-surface-container-lowest p-6 shadow-2xl dark:bg-inverse-surface sm:p-10" data-aos="zoom-in" data-aos-duration="300">
+            <!-- Header -->
+            <div class="mb-8 flex items-start justify-between gap-4">
+                <div>
+                    <h2 id="contact-modal-title" class="font-display-lg text-2xl font-bold leading-tight text-primary dark:text-primary-fixed">Pusat Layanan Terpadu</h2>
+                    <p class="mt-2 text-sm font-bold text-on-surface-variant dark:text-outline">Respons cepat untuk setiap kebutuhan informasi Anda.</p>
+                </div>
+                <button type="button" onclick="closeContactModal()" class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-surface-container text-on-surface-variant transition-colors hover:bg-surface-container-high hover:text-primary dark:bg-surface-variant dark:text-outline dark:hover:bg-surface-container dark:hover:text-primary-fixed">
+                    <span class="material-symbols-outlined text-xl">close</span>
+                </button>
+            </div>
+            <!-- Options -->
+            <div class="grid gap-4">
+                <a href="https://wa.me/6281234567890" target="_blank" class="group flex items-center gap-4 rounded-2xl border border-outline-variant bg-surface p-4 shadow-sm transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-lg dark:border-outline dark:bg-surface-container dark:hover:border-secondary-fixed">
+                    <div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-secondary-container text-on-secondary-container">
+                        <span class="material-symbols-outlined text-2xl">forum</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-on-surface transition-colors group-hover:text-secondary dark:text-white dark:group-hover:text-secondary-fixed">WhatsApp Resmi PMB</h3>
+                        <p class="text-xs font-bold mt-1 text-on-surface-variant dark:text-outline">Konsultasi pendaftaran & beasiswa</p>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary opacity-0 transition-all group-hover:-translate-x-1 group-hover:opacity-100">arrow_forward</span>
+                </a>
+                <a href="mailto:info@unsub.ac.id" class="group flex items-center gap-4 rounded-2xl border border-outline-variant bg-surface p-4 shadow-sm transition-all hover:-translate-y-1 hover:border-primary hover:shadow-lg dark:border-outline dark:bg-surface-container dark:hover:border-primary-fixed">
+                    <div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary-container text-on-primary-container">
+                        <span class="material-symbols-outlined text-2xl">mail</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-on-surface transition-colors group-hover:text-primary dark:text-white dark:group-hover:text-primary-fixed">Email Layanan</h3>
+                        <p class="text-xs font-bold mt-1 text-on-surface-variant dark:text-outline">Untuk kemitraan & informasi umum</p>
+                    </div>
+                    <span class="material-symbols-outlined text-primary opacity-0 transition-all group-hover:-translate-x-1 group-hover:opacity-100">arrow_forward</span>
+                </a>
+                <a href="tel:+62260411415" class="group flex items-center gap-4 rounded-2xl border border-outline-variant bg-surface p-4 shadow-sm transition-all hover:-translate-y-1 hover:border-tertiary hover:shadow-lg dark:border-outline dark:bg-surface-container dark:hover:border-tertiary-fixed">
+                    <div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-tertiary-container text-on-tertiary-container">
+                        <span class="material-symbols-outlined text-2xl">call</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-on-surface transition-colors group-hover:text-tertiary dark:text-white dark:group-hover:text-tertiary-fixed">Telepon Kampus</h3>
+                        <p class="text-xs font-bold mt-1 text-on-surface-variant dark:text-outline">Jam kerja: Senin - Jumat (08:00 - 16:00)</p>
+                    </div>
+                    <span class="material-symbols-outlined text-tertiary opacity-0 transition-all group-hover:-translate-x-1 group-hover:opacity-100">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mega Menu (Mobile & Desktop) -->
+    <div id="mobile-menu" class="hidden fixed top-20 left-0 w-full bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-xl z-40 max-h-[85vh] overflow-y-auto transition-all">
+        <div class="max-w-container-max mx-auto px-margin-desktop py-8">
+            <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-primary dark:text-primary-fixed">Akses Cepat</h3>
+                    <p class="mt-2 max-w-2xl text-base font-body-md text-on-surface-variant dark:text-outline">Temukan informasi kampus sesuai tujuan Anda mengunjungi portal UNSUB.</p>
+                </div>
+                <a href="#pmb" class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container font-label-md px-6 py-3 rounded hover:bg-secondary-fixed transition-colors shadow-sm">
+                    Daftar Sekarang <span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-4 pb-4">
+                <!-- Kuliah di UNSUB -->
+                <section class="rounded-2xl bg-surface p-5 border border-outline-variant dark:bg-surface-container dark:border-outline transition hover:shadow-md">
+                    <div class="mb-4 flex items-start gap-4">
+                        <span class="material-symbols-outlined grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary dark:bg-primary-fixed/10 dark:text-primary-fixed text-2xl">family_restroom</span>
+                        <div>
+                            <h4 class="text-lg font-headline-md text-primary dark:text-primary-fixed leading-tight">Kuliah di UNSUB</h4>
+                            <p class="mt-1 text-sm font-body-md text-on-surface-variant dark:text-outline leading-snug">Informasi khusus calon mahasiswa.</p>
+                        </div>
+                    </div>
+                    <div class="grid gap-2">
+                        <a href="fakultas-gateway.html" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Fakultas & Program Studi</a>
+                        <a href="#pmb" class="rounded-lg bg-primary px-3 py-2 font-label-md text-on-primary hover:opacity-90 transition-opacity">Pendaftaran PMB</a>
+                        <a href="#pmb" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Biaya Kuliah & Beasiswa</a>
+                        <a href="#beranda" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Panduan Jalur Masuk</a>
+                        <a href="#kontak" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Konsultasi PMB</a>
+                    </div>
+                </section>
+
+                <!-- Portal Mahasiswa -->
+                <section class="rounded-2xl bg-surface p-5 border border-outline-variant dark:bg-surface-container dark:border-outline transition hover:shadow-md">
+                    <div class="mb-4 flex items-start gap-4">
+                        <span class="material-symbols-outlined grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-secondary/10 text-secondary dark:bg-secondary-fixed/10 dark:text-secondary-fixed text-2xl">school</span>
+                        <div>
+                            <h4 class="text-lg font-headline-md text-primary dark:text-primary-fixed leading-tight">Portal Mahasiswa</h4>
+                            <p class="mt-1 text-sm font-body-md text-on-surface-variant dark:text-outline leading-snug">Akses layanan harian mahasiswa.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="#beranda" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">SIAKAD</a>
+                        <a href="#beranda" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">E-learning</a>
+                        <a href="kalender-akademik.html" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Kalender Akademik</a>
+                        <a href="#news" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Pengumuman</a>
+                        <a href="#student-life" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Layanan Mhs</a>
+                        <a href="#kontak" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Helpdesk</a>
+                    </div>
+                </section>
+
+                <!-- Kolaborasi & Kemitraan -->
+                <section class="rounded-2xl bg-surface p-5 border border-outline-variant dark:bg-surface-container dark:border-outline transition hover:shadow-md">
+                    <div class="mb-4 flex items-start gap-4">
+                        <span class="material-symbols-outlined grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-tertiary/10 text-tertiary dark:bg-tertiary-fixed/10 dark:text-tertiary-fixed text-2xl">handshake</span>
+                        <div>
+                            <h4 class="text-lg font-headline-md text-primary dark:text-primary-fixed leading-tight">Kemitraan</h4>
+                            <p class="mt-1 text-sm font-body-md text-on-surface-variant dark:text-outline leading-snug">Kanal kolaborasi eksternal.</p>
+                        </div>
+                    </div>
+                    <div class="grid gap-2">
+                        <a href="#riset" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Skema Kerja Sama</a>
+                        <a href="#riset" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Proposal Kolaborasi</a>
+                        <a href="hasil-pencarian-mitra-magang.html" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Lowongan Magang Mitra</a>
+                        <a href="hasil-pencarian-kisah-sukses-alumni.html" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Jejaring Alumni Industri</a>
+                    </div>
+                </section>
+
+                <!-- Mutu & Akreditasi -->
+                <section class="rounded-2xl bg-surface p-5 border border-outline-variant dark:bg-surface-container dark:border-outline transition hover:shadow-md">
+                    <div class="mb-4 flex items-start gap-4">
+                        <span class="material-symbols-outlined grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary dark:bg-primary-fixed/10 dark:text-primary-fixed text-2xl">verified</span>
+                        <div>
+                            <h4 class="text-lg font-headline-md text-primary dark:text-primary-fixed leading-tight">Mutu & Akreditasi</h4>
+                            <p class="mt-1 text-sm font-body-md text-on-surface-variant dark:text-outline leading-snug">Akses eviden mutu & dokumen.</p>
+                        </div>
+                    </div>
+                    <div class="grid gap-2">
+                        <a href="#trust" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Eviden Akreditasi</a>
+                        <a href="#trust" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">SPMI & Audit Mutu</a>
+                        <a href="#trust" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">IKU & Kinerja Institusi</a>
+                        <a href="#riset" class="rounded-lg px-3 py-2 font-label-md text-on-surface hover:bg-primary/5 hover:text-primary dark:text-white dark:hover:bg-primary-fixed/10 dark:hover:text-primary-fixed transition-colors">Luaran Tridharma</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preferences Dropdown -->
+    <div id="preferences-menu" class="hidden absolute top-20 right-4 sm:right-margin-desktop z-[60] w-64 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-lg dark:bg-inverse-surface p-4">
+        <div class="mb-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface-variant dark:text-outline mb-2">Tema Tampilan</h4>
+            <button id="mobile-theme-toggle" class="flex w-full items-center justify-between rounded-lg bg-surface px-4 py-2 text-sm font-bold text-on-surface transition-colors hover:bg-surface-container-high dark:bg-surface-container dark:text-white dark:hover:bg-surface-variant">
+                <span>Ganti Tema (Gelap/Terang)</span>
+                <span class="material-symbols-outlined text-lg">contrast</span>
+            </button>
+        </div>
+        <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface-variant dark:text-outline mb-2">Bahasa (Language)</h4>
+            <div class="relative">
+                <select id="mobile-language-switcher" class="w-full appearance-none rounded-lg border border-outline-variant bg-surface px-4 py-2 text-sm font-bold text-on-surface focus:border-primary focus:ring-primary dark:border-outline dark:bg-surface-container dark:text-white">
+                    <option value="id">🇮🇩 Bahasa Indonesia</option>
+                    <option value="en">🇬🇧 English</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-lg">expand_more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TopNavBar -->
+    <header class="bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-sm border-b border-outline-variant dark:border-outline sticky top-0 z-50 transition-colors">
+        <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+            <!-- Brand Logo -->
+            <a class="font-headline-md font-bold text-primary dark:text-primary-fixed" href="#beranda">
+                Universitas Subang
+            </a>
+            <!-- Trailing Actions (Search + Preferences + Menu) -->
+            <div class="flex items-center gap-4 ml-auto">
+                <button id="search-open-btn" aria-label="Search" class="grid h-10 w-10 place-items-center rounded-full text-primary dark:text-primary-fixed hover:bg-primary/10 dark:hover:bg-primary-fixed/10 transition-colors duration-200">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+                </button>
+                <button id="preferences-btn" aria-label="Preferences" class="grid h-10 w-10 place-items-center rounded-full text-primary dark:text-primary-fixed hover:bg-primary/10 dark:hover:bg-primary-fixed/10 transition-colors duration-200">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Menu" class="flex items-center justify-center gap-2 bg-primary text-on-primary font-label-md px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity ml-2">
+                    <span class="hidden sm:inline">Menu Utama</span>
+                    <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <section id="beranda"
+            class="relative isolate overflow-hidden px-4 pb-10 pt-24 sm:px-6 sm:pb-14 sm:pt-28 lg:min-h-screen lg:px-8 lg:pt-36">
+            <div
+                class="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_top_left,rgba(0,92,161,0.29),transparent_34%),radial-gradient(circle_at_78%_12%,rgba(1,124,255,0.1),transparent_30%),linear-gradient(180deg,#0077EE26_0%,#FFF_58%,#F8F9FA_100%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(255,255,0,0.14),transparent_28%),radial-gradient(circle_at_80%_18%,rgba(0,146,63,0.18),transparent_35%),linear-gradient(180deg,#000_0%,#07111b_68%,#000_100%)]">
+            </div>
+            <div class="campus-grid absolute inset-0 -z-20 opacity-60 dark:opacity-20"></div>
+            <div
+                class="orb absolute -right-24 top-28 -z-10 h-72 w-72 rounded-full bg-primary/15 blur-3xl dark:bg-secondary-fixed/10">
+            </div>
+            <div class="orb absolute -left-24 bottom-12 -z-10 h-72 w-72 rounded-full bg-secondary/15 blur-3xl"></div>
+
+            <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center" data-aos="fade-up">
+                <div
+                    class="mb-5 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-primary/15 bg-surface-container-lowest px-4 py-2 text-sm font-black text-primary shadow-sm dark:border-outline dark:bg-surface-container-lowest dark:text-secondary-fixed sm:mb-8 sm:text-base">
+                    <span class="h-2.5 w-2.5 rounded-full bg-secondary"></span>
+                    Portal Resmi Universitas Subang
+                </div>
+
+                <h1
+                    class="font-headline-lg text-[clamp(2.5rem,8vw,4.5rem)] font-black leading-[1.1] tracking-tight text-primary dark:text-white">
+                    Temukan Masa Depanmu <br class="hidden sm:block" />
+                    <span class="kinetic-word mt-2 block text-slate-950 dark:text-secondary-fixed">di Universitas Subang.</span>
+                </h1>
+
+                <p
+                    class="mt-6 max-w-2xl text-base leading-[1.6] text-on-surface-variant dark:text-slate-200 sm:text-lg lg:mt-8 lg:text-xl">
+                    Jelajahi fakultas, program studi, beasiswa, kehidupan kampus, dan informasi pendaftaran dengan cepat
+                    dan presisi.
+                </p>
+
+                <!-- Search Bar Center -->
+                <div class="relative mt-10 w-full max-w-3xl" data-aos="fade-up" data-aos-delay="150">
+                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-6">
+                        <span class="material-symbols-outlined text-[28px] text-primary dark:text-secondary-fixed">search</span>
+                    </div>
+                    <input type="search" placeholder="Ketik apa yang ingin Anda cari..."
+                        class="w-full rounded-full border-2 border-outline-variant bg-surface-container-lowest py-5 pl-16 pr-36 text-lg font-bold text-on-surface shadow-md backdrop-blur focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20 dark:border-outline dark:bg-inverse-surface dark:text-white dark:focus:border-accent dark:focus:ring-accent/20 sm:py-6 sm:text-xl" />
+                    <button type="button"
+                        class="absolute inset-y-2 right-2 rounded-full bg-primary px-6 text-base font-black text-white shadow-sm transition hover:scale-105 hover:bg-blue-800 dark:bg-secondary-fixed dark:text-primary sm:inset-y-3 sm:right-3 sm:px-8">Cari</button>
+                </div>
+
+                <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm font-bold text-outline dark:text-outline-variant"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <span>Pencarian populer:</span>
+                    <a href="#pmb"
+                        class="rounded-full border border-outline-variant bg-surface-container-lowest px-4 py-1.5 transition-colors hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-outline dark:bg-surface-container-lowest dark:hover:border-accent dark:hover:bg-secondary-fixed/10 dark:hover:text-secondary-fixed">Beasiswa</a>
+                    <a href="#fakultas"
+                        class="rounded-full border border-outline-variant bg-surface-container-lowest px-4 py-1.5 transition-colors hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-outline dark:bg-surface-container-lowest dark:hover:border-accent dark:hover:bg-secondary-fixed/10 dark:hover:text-secondary-fixed">Fakultas
+                        Teknik</a>
+                    <a href="#trust"
+                        class="rounded-full border border-outline-variant bg-surface-container-lowest px-4 py-1.5 transition-colors hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-outline dark:bg-surface-container-lowest dark:hover:border-accent dark:hover:bg-secondary-fixed/10 dark:hover:text-secondary-fixed">Akreditasi</a>
+                </div>
+            </div>
+
+            <!-- Merged Bento Stats at the bottom -->
+            <div class="mx-auto mt-16 grid w-full max-w-6xl grid-cols-1 gap-5 md:grid-cols-4 lg:mt-24"
+                data-aos="fade-up" data-aos-delay="300" aria-label="Bukti sosial Universitas Subang">
+                <!-- 15k Mahasiswa (Col span 1) -->
+                <div
+                    class="bg-surface-container border border-outline-variant flex flex-col items-center justify-center rounded-[2rem] p-6 text-center shadow-sm md:col-span-1">
+                    <strong class="text-5xl font-black text-primary dark:text-secondary-fixed sm:text-6xl">15k+</strong>
+                    <span
+                        class="mt-2 text-sm font-black uppercase tracking-widest text-on-surface-variant dark:text-slate-300">Mahasiswa
+                        Aktif</span>
+                </div>
+
+                <!-- Akreditasi Unggul (Col span 2) -->
+                <article
+                    class="bento-card group relative overflow-hidden rounded-[2rem] bg-slate-950 p-6 text-white shadow-sm sm:p-7 md:col-span-2">
+                    <div
+                        class="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-secondary-fixed/20 blur-2xl transition-all duration-500 group-hover:bg-secondary-fixed/40">
+                    </div>
+                    <div class="relative z-10 flex h-full flex-col justify-between sm:flex-row sm:items-center">
+                        <div>
+                            <span class="material-symbols-outlined text-4xl text-secondary-fixed sm:text-5xl"
+                                aria-hidden="true">workspace_premium</span>
+                            <strong class="mt-4 block text-3xl font-black sm:text-4xl">Akreditasi Unggul</strong>
+                            <p class="mt-2 text-sm font-medium text-slate-300 sm:text-base">Informasi mutu menonjol
+                                untuk kredibilitas.</p>
+                        </div>
+                        <div
+                            class="mt-6 grid h-24 w-24 shrink-0 place-items-center rounded-full border-[6px] border-accent/80 text-center sm:mt-0 sm:h-28 sm:w-28 sm:border-[8px]">
+                            <span class="text-sm font-black text-secondary-fixed sm:text-base">BAN-PT</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 16 Prodi (Col span 1) -->
+                <article
+                    class="bento-card flex flex-col items-center justify-center rounded-[2rem] bg-primary p-6 text-center text-white shadow-sm md:col-span-1">
+                    <span class="material-symbols-outlined text-4xl mb-2" aria-hidden="true">school</span>
+                    <strong class="text-5xl font-black sm:text-6xl">16</strong>
+                    <span class="mt-2 text-sm font-black uppercase tracking-widest text-blue-100">Program Studi</span>
+                </article>
+
+                <!-- 500+ Mitra (Col span 1) -->
+                <article
+                    class="bento-card flex flex-col items-center justify-center rounded-[2rem] bg-surface-container-lowest p-6 text-center shadow-sm dark:bg-surface-container-lowest md:col-span-1">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-2"
+                        aria-hidden="true">handshake</span>
+                    <strong class="text-5xl font-black text-primary dark:text-secondary-fixed sm:text-6xl">500+</strong>
+                    <span
+                        class="mt-2 text-xs font-black uppercase tracking-widest text-on-surface-variant dark:text-slate-300">Mitra
+                        Industri</span>
+                </article>
+
+                <!-- 90% Lulusan (Col span 3) -->
+                <article
+                    class="bento-card overflow-hidden rounded-[2rem] bg-secondary-fixed p-6 text-primary shadow-sm dark:bg-inverse-surface sm:p-8 md:col-span-3">
+                    <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+                        <div class="flex-shrink-0 dark:text-secondary-fixed">
+                            <span class="material-symbols-outlined text-5xl sm:text-6xl"
+                                aria-hidden="true">trending_up</span>
+                            <strong class="mt-2 block text-5xl font-black sm:text-6xl">90%</strong>
+                        </div>
+                        <div class="dark:text-white">
+                            <h3 class="text-2xl font-black sm:text-3xl">Lulusan terserap kerja dalam 6 bulan.</h3>
+                            <p class="mt-2 font-bold opacity-80 dark:text-slate-300 sm:text-lg">Data karier memperkuat authority bias dan
+                                mengurangi rasa takut salah memilih kampus.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="keunggulan" class="py-8 sm:py-12">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mb-8 sm:mb-12">
+                    <p class="text-base font-black uppercase tracking-[0.2em] text-secondary">Keunggulan Utama</p>
+                    <h2
+                        class="mt-3 font-headline-lg text-3xl font-black leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">
+                        Pendidikan unggul yang dirancang untuk masa depan Anda.</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
+                    <!-- Feature 1: Kurikulum Adaptif -->
+                    <div
+                        class="bg-surface-container-lowest backdrop-blur-md p-8 rounded-[1.5rem] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col items-start gap-5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 dark:bg-slate-800/80 dark:backdrop-blur-xl dark:border-outline/50 dark:hover:shadow-black/50 dark:hover:border-slate-600 group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center dark:bg-blue-500/10 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                            <span class="material-symbols-outlined text-3xl">factory</span>
+                        </div>
+                        <div class="flex flex-col gap-2 w-full">
+                            <h3 class="font-bold text-lg sm:text-xl text-on-surface dark:text-white tracking-tight">
+                                Kurikulum Adaptif</h3>
+                            <p
+                                class="text-base sm:text-lg font-medium text-on-surface-variant dark:text-slate-200 leading-relaxed">
+                                Terus berinovasi menyesuaikan standar pendidikan dengan praktik terpadu dari Dunia Usaha
+                                & Industri sebagai pembentuk SDM unggul.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Biaya Terjangkau -->
+                    <div
+                        class="bg-surface-container-lowest backdrop-blur-md p-8 rounded-[1.5rem] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col items-start gap-5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 dark:bg-slate-800/80 dark:backdrop-blur-xl dark:border-outline/50 dark:hover:shadow-black/50 dark:hover:border-slate-600 group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-yellow-50 text-yellow-600 flex items-center justify-center dark:bg-yellow-500/10 dark:text-yellow-400 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                            <span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+                        </div>
+                        <div class="flex flex-col gap-2 w-full">
+                            <h3 class="font-bold text-lg sm:text-xl text-on-surface dark:text-white tracking-tight">Biaya
+                                Terjangkau</h3>
+                            <p
+                                class="text-base sm:text-lg font-medium text-on-surface-variant dark:text-slate-200 leading-relaxed">
+                                Pendidikan unggul kini lebih mudah diakses melalui opsi skema pembayaran yang fleksibel
+                                dan dapat disesuaikan dengan kemampuan Anda.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Lokasi Strategis -->
+                    <div
+                        class="bg-surface-container-lowest backdrop-blur-md p-8 rounded-[1.5rem] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col items-start gap-5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 dark:bg-slate-800/80 dark:backdrop-blur-xl dark:border-outline/50 dark:hover:shadow-black/50 dark:hover:border-slate-600 group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center dark:bg-green-500/10 dark:text-green-400 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                            <span class="material-symbols-outlined text-3xl">map</span>
+                        </div>
+                        <div class="flex flex-col gap-2 w-full">
+                            <h3 class="font-bold text-lg sm:text-xl text-on-surface dark:text-white tracking-tight">
+                                Lokasi Strategis</h3>
+                            <p
+                                class="text-base sm:text-lg font-medium text-on-surface-variant dark:text-slate-200 leading-relaxed">
+                                Terletak strategis di pusat kota Subang, terintegrasi penuh dengan ekosistem industri,
+                                Pelabuhan Patimban & Kawasan Segitiga Rebana.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4: Tech-Enabled Learning -->
+                    <div
+                        class="bg-surface-container-lowest backdrop-blur-md p-8 rounded-[1.5rem] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col items-start gap-5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 dark:bg-slate-800/80 dark:backdrop-blur-xl dark:border-outline/50 dark:hover:shadow-black/50 dark:hover:border-slate-600 group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center dark:bg-purple-500/10 dark:text-purple-400 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                            <span class="material-symbols-outlined text-3xl">cloud_sync</span>
+                        </div>
+                        <div class="flex flex-col gap-2 w-full">
+                            <h3 class="font-bold text-lg sm:text-xl text-on-surface dark:text-white tracking-tight">
+                                Tech-Enabled Learning</h3>
+                            <p
+                                class="text-base sm:text-lg font-medium text-on-surface-variant dark:text-slate-200 leading-relaxed">
+                                Pengalaman kuliah tanpa batas ruang. Integrasi LMS dan SIAKAD ciptakan kenyamanan
+                                belajar luring, daring, maupun <i>blended learning</i>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="visi-rektor" class="px-4 py-8 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-5xl">
+                <article class="bento-card overflow-hidden rounded-[2.5rem] bg-surface-container-lowest shadow-sm dark:bg-inverse-surface"
+                    data-aos="fade-up">
+                    <div class="grid gap-0 md:grid-cols-[0.6fr_1.4fr]">
+                        <div
+                            class="grid min-h-64 place-items-center bg-gradient-to-br from-primary to-secondary p-8 text-white md:min-h-full">
+                            <span class="material-symbols-outlined text-8xl opacity-80"
+                                aria-hidden="true">account_balance</span>
+                        </div>
+                        <div class="p-8 sm:p-12">
+                            <p class="text-sm font-black uppercase tracking-[0.2em] text-primary dark:text-secondary-fixed">Visi
+                                Rektor</p>
+                            <blockquote
+                                class="mt-4 font-headline-lg text-2xl font-black leading-snug text-slate-950 dark:text-white sm:text-3xl">
+                                “UNSUB menjadi pusat pemberdayaan manusia yang dekat dengan kebutuhan masyarakat dan
+                                industri Subang.”
+                            </blockquote>
+                            <p class="mt-8 text-lg font-bold text-on-surface-variant dark:text-outline-variant">Universitas Subang</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="fakultas" class="px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between" data-aos="fade-up">
+                    <div class="max-w-3xl">
+                        <p class="text-base font-black uppercase tracking-[0.2em] text-secondary">Faculty Discovery
+                            Gateway</p>
+                        <h2
+                            class="mt-3 font-headline-lg text-3xl font-black leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">
+                            Kunjungi fakultas sesuai minat dan rencana kariermu.</h2>
+                        <p class="mt-4 text-lg text-on-surface-variant dark:text-slate-300">Horizontal card di mobile dan bento
+                            grid di desktop membantu calon mahasiswa membandingkan pilihan tanpa kewalahan.</p>
+                    </div>
+                    <a href="#pmb"
+                        class="rounded-full bg-primary px-6 py-3 text-center font-black text-white shadow-glow">Tanya
+                        PMB</a>
+                </div>
+
+                <div class="flex snap-x gap-4 overflow-x-auto pb-5 lg:grid lg:grid-cols-4 lg:overflow-visible">
+                    <a href="/web-fia"
+                        class="bento-card min-w-[290px] snap-center rounded-[1.75rem] bg-primary p-6 sm:rounded-[2rem] sm:p-7 text-white lg:col-span-2 lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl" aria-hidden="true">table_chart</span>
+                        <h3 class="mt-10 text-3xl font-black">Fakultas Ilmu Administrasi</h3>
+                        <p class="mt-3 text-blue-50">Tata kelola publik dan bisnis adaptif.</p>
+                        <span class="mt-8 inline-flex font-black">Kunjungi Fakultas →</span>
+                    </a>
+                    <a href="/web-teknik"
+                        class="bento-card min-w-[290px] snap-center rounded-[1.75rem] bg-slate-950 p-6 sm:rounded-[2rem] sm:p-7 text-white lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl text-secondary-fixed"
+                            aria-hidden="true">engineering</span>
+                        <h3 class="mt-10 text-3xl font-black">Fakultas Teknik</h3>
+                        <p class="mt-3 text-slate-300">Infrastruktur, mesin, elektro, dan arsitektur.</p>
+                        <span class="mt-8 inline-flex font-black text-secondary-fixed">Kunjungi Fakultas →</span>
+                    </a>
+                    <a href="/web-hukum"
+                        class="bento-card min-w-[290px] snap-center rounded-[1.75rem] bg-surface-container-lowest p-6 sm:rounded-[2rem] sm:p-7 shadow-sm dark:bg-surface-container-lowest lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl text-red-600" aria-hidden="true">gavel</span>
+                        <h3 class="mt-10 text-3xl font-black text-primary dark:text-white">Fakultas Hukum</h3>
+                        <p class="mt-3 text-on-surface-variant dark:text-slate-300">Pendidikan hukum berintegritas.</p>
+                        <span class="mt-8 inline-flex font-black text-primary dark:text-secondary-fixed">Kunjungi Fakultas
+                            →</span>
+                    </a>
+                    <a href="/web-fasilkom"
+                        class="bento-card min-w-[290px] snap-center rounded-[1.75rem] bg-surface-container-lowest p-6 sm:rounded-[2rem] sm:p-7 shadow-sm dark:bg-surface-container-lowest lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl text-primary" aria-hidden="true">terminal</span>
+                        <h3 class="mt-10 text-3xl font-black text-primary dark:text-white">Fakultas Ilmu Komputer</h3>
+                        <p class="mt-3 text-on-surface-variant dark:text-slate-300">Talenta teknologi dan sistem informasi.</p>
+                        <span class="mt-8 inline-flex font-black text-primary dark:text-secondary-fixed">Kunjungi Fakultas
+                            →</span>
+                    </a>
+                    <a href="/web-fikom"
+                        class="bento-card group min-w-[290px] snap-center rounded-[1.75rem] bg-secondary-fixed p-6 sm:rounded-[2rem] sm:p-7 text-primary dark:bg-inverse-surface lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl dark:text-secondary-fixed" aria-hidden="true">campaign</span>
+                        <h3 class="mt-10 text-3xl font-black dark:text-white">Fakultas Ilmu Komunikasi</h3>
+                        <p class="mt-3 font-bold dark:text-slate-300">Media, komunikasi, dan kreativitas digital.</p>
+                        <span class="mt-8 inline-flex font-black dark:text-secondary-fixed transition-transform group-hover:translate-x-2">Kunjungi Fakultas →</span>
+                    </a>
+                    <a href="/web-agrorektan"
+                        class="bento-card min-w-[290px] snap-center rounded-[2rem] bg-secondary p-7 text-white lg:col-span-2 lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl" aria-hidden="true">agriculture</span>
+                        <h3 class="mt-10 text-3xl font-black">Fakultas Agrobisnis dan Rekayasa Pertanian</h3>
+                        <p class="mt-3 text-green-50">Ketahanan pangan dan teknologi pertanian.</p>
+                        <span class="mt-8 inline-flex font-black">Kunjungi Fakultas →</span>
+                    </a>
+                    <a href="/web-fkip"
+                        class="bento-card min-w-[290px] snap-center rounded-[1.75rem] bg-surface-container-lowest p-6 sm:rounded-[2rem] sm:p-7 shadow-sm dark:bg-surface-container-lowest lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl text-primary"
+                            aria-hidden="true">cast_for_education</span>
+                        <h3 class="mt-10 text-3xl font-black text-primary dark:text-white">FKIP</h3>
+                        <p class="mt-3 text-on-surface-variant dark:text-slate-300">Pendidik inspiratif dan pedagogi modern.</p>
+                        <span class="mt-8 inline-flex font-black text-primary dark:text-secondary-fixed">Kunjungi Fakultas
+                            →</span>
+                    </a>
+
+                    <a href="/web-pascasarjana"
+                        class="bento-card group min-w-[290px] snap-center rounded-[1.75rem] bg-slate-950 p-6 sm:rounded-[2rem] sm:p-7 shadow-sm lg:min-w-0">
+                        <span class="material-symbols-outlined text-5xl text-secondary-fixed"
+                            aria-hidden="true">history_edu</span>
+                        <h3 class="mt-10 text-3xl font-black text-white">Sekolah Pascasarjana</h3>
+                        <p class="mt-3 font-medium text-slate-300">Pendidikan magister lanjutan dan riset spesialis.</p>
+                        <span class="mt-8 inline-flex font-black text-secondary-fixed transition-transform group-hover:translate-x-2">Kunjungi Program
+                            →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="student-life" class="bg-slate-950 px-4 py-14 text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-10 max-w-3xl" data-aos="fade-up">
+                    <p class="text-base font-black uppercase tracking-[0.2em] text-secondary-fixed">Short-Form Content Feed</p>
+                    <h2 class="mt-3 font-headline-lg text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">Lihat
+                        kehidupan kampus
+                        yang ingin kamu ikuti.</h2>
+                    <p class="mt-4 text-lg text-slate-300">Konten bergaya reels memperkuat social proof dan mimetic
+                        desire, tetapi tetap berupa kartu ringan untuk performa prototipe HTML.</p>
+                </div>
+                <div class="grid snap-x snap-mandatory auto-cols-[80%] sm:auto-cols-[45%] grid-flow-col gap-5 overflow-x-auto pb-4 md:auto-cols-auto md:grid-flow-row md:grid-cols-3 md:overflow-x-visible md:pb-0">
+                    <article
+                        class="bento-card relative h-[450px] w-full snap-center overflow-hidden rounded-[2rem] bg-gradient-to-b from-primary to-blue-950 p-6 sm:h-[500px] lg:h-[550px]"
+                        data-aos="fade-up">
+                        <span class="rounded-full bg-surface-container-lowest px-4 py-2 text-base font-black">Reel 01</span>
+                        <div class="absolute inset-x-6 bottom-6">
+                            <span class="material-symbols-outlined text-5xl text-secondary-fixed"
+                                aria-hidden="true">science</span>
+                            <h3 class="mt-4 text-3xl font-black">Keseruan praktikum di Lab Teknik.</h3>
+                            <p class="mt-3 text-blue-100">Mahasiswa membangun prototipe dan menguji solusi industri.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="bento-card relative h-[450px] w-full snap-center overflow-hidden rounded-[2rem] bg-gradient-to-b from-secondary to-emerald-950 p-6 sm:h-[500px] lg:h-[550px]"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <span class="rounded-full bg-surface-container-lowest px-4 py-2 text-base font-black">Reel 02</span>
+                        <div class="absolute inset-x-6 bottom-6">
+                            <span class="material-symbols-outlined text-5xl text-secondary-fixed"
+                                aria-hidden="true">tips_and_updates</span>
+                            <h3 class="mt-4 text-3xl font-black">Tips beasiswa dari Mahasiswa Berprestasi.</h3>
+                            <p class="mt-3 text-green-50">Cerita singkat yang membantu calon mahasiswa mengambil langkah
+                                pertama.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="bento-card relative h-[450px] w-full snap-center overflow-hidden rounded-[2rem] bg-gradient-to-b from-yellow-300 to-amber-700 p-6 sm:h-[500px] lg:h-[550px]"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <span class="rounded-full bg-slate-950/10 px-4 py-2 text-base font-black">Reel 03</span>
+                        <div class="absolute inset-x-6 bottom-6">
+                            <span class="material-symbols-outlined text-5xl text-secondary-fixed"
+                                aria-hidden="true">groups</span>
+                            <h3 class="mt-4 text-3xl font-black">Organisasi, komunitas, dan ruang kolaborasi.</h3>
+                            <p class="mt-3 text-amber-50">Kampus bukan hanya kelas, tetapi tempat bertumbuh bersama.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between" data-aos="fade-up">
+                    <div class="max-w-6xl">
+                        <p class="text-base font-black uppercase tracking-[0.2em] text-secondary">Dynamic News & Events
+                        </p>
+                        <h2
+                            class="mt-3 font-headline-lg text-3xl font-black leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">
+                            Kampus yang aktif, hidup, dan relevan.</h2>
+                    </div>
+                </div>
+                <div class="grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
+                    <div class="grid gap-5" aria-label="Daftar berita Universitas Subang">
+                        <a href="#"
+                            class="bento-card block overflow-hidden rounded-[2.5rem] bg-surface-container-lowest shadow-sm dark:bg-surface-container-lowest"
+                            data-aos="fade-up" aria-label="Buka detail berita utama UNSUB">
+                            <div class="news-card-grid">
+                                <div class="relative aspect-square w-full overflow-hidden">
+                                    <img src="https://picsum.photos/seed/unsub-news-01/1080"
+                                        alt="Dummy foto berita UNSUB 1" class="h-full w-full object-cover"
+                                        loading="lazy" decoding="async" />
+                                    <span
+                                        class="absolute bottom-3 right-3 rounded-full bg-primary/95 px-4 py-2 text-sm font-black text-white shadow-sm backdrop-blur-sm">Berita
+                                        Utama</span>
+                                </div>
+                                <div class="news-card-body p-6 sm:p-7 lg:p-8">
+                                    <h3
+                                        class="news-title-clamp text-[1.5rem] font-black leading-[1.3] text-slate-950 dark:text-white sm:text-[1.65rem] lg:text-[1.8rem]">
+                                        UNSUB memperluas kolaborasi riset dan magang bersama mitra strategis Subang.
+                                    </h3>
+                                    <p
+                                        class="news-desc-clamp text-[1.05rem] leading-[1.68] text-on-surface-variant dark:text-slate-200">
+                                        Kegiatan kampus, capaian mahasiswa, dan kerja sama industri ditampilkan dalam
+                                        grid dinamis agar institusi terlihat aktif dan terpercaya.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#"
+                            class="bento-card block overflow-hidden rounded-[2.5rem] bg-surface-container-lowest shadow-sm dark:bg-surface-container-lowest"
+                            data-aos="fade-up" aria-label="Buka detail berita riset UNSUB">
+                            <div class="news-card-grid">
+                                <div class="relative aspect-square w-full overflow-hidden">
+                                    <img src="https://picsum.photos/seed/unsub-news-02/1080"
+                                        alt="Dummy foto berita UNSUB 2" class="h-full w-full object-cover"
+                                        loading="lazy" decoding="async" />
+                                    <span
+                                        class="absolute bottom-3 right-3 rounded-full bg-secondary/95 px-4 py-2 text-sm font-black text-white shadow-sm backdrop-blur-sm">Riset</span>
+                                </div>
+                                <div class="news-card-body p-6 sm:p-7 lg:p-8">
+                                    <h3
+                                        class="news-title-clamp text-[1.5rem] font-black leading-[1.3] text-slate-950 dark:text-white sm:text-[1.65rem] lg:text-[1.8rem]">
+                                        Dosen dan mahasiswa UNSUB mengembangkan riset terapan untuk kebutuhan masyarakat
+                                        Subang.</h3>
+                                    <p
+                                        class="news-desc-clamp text-[1.05rem] leading-[1.68] text-on-surface-variant dark:text-slate-200">
+                                        Publikasi, pengabdian masyarakat, dan inovasi lokal dibuat mudah ditemukan oleh
+                                        mitra, asesor, dan calon mahasiswa.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#"
+                            class="bento-card block overflow-hidden rounded-[2.5rem] bg-surface-container-lowest shadow-sm dark:bg-surface-container-lowest"
+                            data-aos="fade-up" aria-label="Buka detail berita akademik UNSUB">
+                            <div class="news-card-grid">
+                                <div class="relative aspect-square w-full overflow-hidden">
+                                    <img src="https://picsum.photos/seed/unsub-news-03/1080"
+                                        alt="Dummy foto berita UNSUB 3" class="h-full w-full object-cover"
+                                        loading="lazy" decoding="async" />
+                                    <span
+                                        class="absolute bottom-3 right-3 rounded-full bg-primary/95 px-4 py-2 text-sm font-black text-white shadow-sm backdrop-blur-sm">Akademik</span>
+                                </div>
+                                <div class="news-card-body p-6 sm:p-7 lg:p-8">
+                                    <h3
+                                        class="news-title-clamp text-[1.5rem] font-black leading-[1.3] text-slate-950 dark:text-white sm:text-[1.65rem] lg:text-[1.8rem]">
+                                        Fakultas membuka agenda open campus untuk calon mahasiswa dan orang tua.</h3>
+                                    <p
+                                        class="news-desc-clamp text-[1.05rem] leading-[1.68] text-on-surface-variant dark:text-slate-200">
+                                        Kegiatan pengenalan fakultas membantu keluarga memahami pilihan prodi, biaya,
+                                        prospek karier, dan lingkungan belajar.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#"
+                            class="bento-card block overflow-hidden rounded-[2.5rem] bg-surface-container-lowest shadow-sm dark:bg-surface-container-lowest"
+                            data-aos="fade-up" aria-label="Buka detail berita prestasi UNSUB">
+                            <div class="news-card-grid">
+                                <div class="relative aspect-square w-full overflow-hidden">
+                                    <img src="https://picsum.photos/seed/unsub-news-04/1080"
+                                        alt="Dummy foto berita UNSUB 4" class="h-full w-full object-cover"
+                                        loading="lazy" decoding="async" />
+                                    <span
+                                        class="absolute bottom-3 right-3 rounded-full bg-yellow-300/95 px-4 py-2 text-sm font-black text-primary shadow-sm backdrop-blur-sm">Prestasi</span>
+                                </div>
+                                <div class="news-card-body p-6 sm:p-7 lg:p-8">
+                                    <h3
+                                        class="news-title-clamp text-[1.5rem] font-black leading-[1.3] text-slate-950 dark:text-white sm:text-[1.65rem] lg:text-[1.8rem]">
+                                        Mahasiswa UNSUB meraih prestasi dalam kompetisi akademik dan kreativitas
+                                        digital.</h3>
+                                    <p
+                                        class="news-desc-clamp text-[1.05rem] leading-[1.68] text-on-surface-variant dark:text-slate-200">
+                                        Cerita prestasi memperkuat social proof bahwa mahasiswa dapat berkembang melalui
+                                        riset, organisasi, dan proyek nyata.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#"
+                            class="bento-card block overflow-hidden rounded-[2.5rem] bg-surface-container-lowest shadow-sm dark:bg-surface-container-lowest"
+                            data-aos="fade-up" aria-label="Buka detail berita kemahasiswaan UNSUB">
+                            <div class="news-card-grid">
+                                <div class="relative aspect-square w-full overflow-hidden">
+                                    <img src="https://picsum.photos/seed/unsub-news-05/1080"
+                                        alt="Dummy foto berita UNSUB 5" class="h-full w-full object-cover"
+                                        loading="lazy" decoding="async" />
+                                    <span
+                                        class="absolute bottom-3 right-3 rounded-full bg-primary/95 px-4 py-2 text-sm font-black text-white shadow-sm backdrop-blur-sm">Kemahasiswaan</span>
+                                </div>
+                                <div class="news-card-body p-6 sm:p-7 lg:p-8">
+                                    <h3
+                                        class="news-title-clamp text-[1.5rem] font-black leading-[1.3] text-slate-950 dark:text-white sm:text-[1.65rem] lg:text-[1.8rem]">
+                                        Komunitas mahasiswa memperkuat pengalaman belajar di luar ruang kelas.</h3>
+                                    <p
+                                        class="news-desc-clamp text-[1.05rem] leading-[1.68] text-on-surface-variant dark:text-slate-200">
+                                        Organisasi, kegiatan sosial, dan ruang kolaborasi membantu calon mahasiswa
+                                        membayangkan kehidupan kampus sehari-hari.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#"
+                            class="bento-card block overflow-hidden rounded-[2.5rem] bg-surface-container-lowest shadow-sm dark:bg-surface-container-lowest"
+                            data-aos="fade-up" aria-label="Buka detail pengumuman UNSUB">
+                            <div class="news-card-grid">
+                                <div class="relative aspect-square w-full overflow-hidden">
+                                    <img src="https://picsum.photos/seed/unsub-news-06/1080"
+                                        alt="Dummy foto berita UNSUB 6" class="h-full w-full object-cover"
+                                        loading="lazy" decoding="async" />
+                                    <span
+                                        class="absolute bottom-3 right-3 rounded-full bg-secondary/95 px-4 py-2 text-sm font-black text-white shadow-sm backdrop-blur-sm">Pengumuman</span>
+                                </div>
+                                <div class="news-card-body p-6 sm:p-7 lg:p-8">
+                                    <h3
+                                        class="news-title-clamp text-[1.5rem] font-black leading-[1.3] text-slate-950 dark:text-white sm:text-[1.65rem] lg:text-[1.8rem]">
+                                        Informasi PMB, beasiswa, dan jadwal layanan kampus diperbarui secara berkala.
+                                    </h3>
+                                    <p
+                                        class="news-desc-clamp text-[1.05rem] leading-[1.68] text-on-surface-variant dark:text-slate-200">
+                                        Pengumuman resmi dibuat menonjol agar calon mahasiswa dan orang tua tidak
+                                        melewatkan tanggal penting.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Tombol Lihat Semua Berita -->
+                        <div class="mt-2" data-aos="fade-up">
+                            <a href="#"
+                                class="bento-card group flex w-full flex-col justify-between gap-4 rounded-[2.5rem] bg-slate-950 p-6 text-white transition-all hover:bg-primary dark:bg-inverse-surface dark:hover:bg-slate-800 sm:flex-row sm:items-center sm:p-8">
+                                <div>
+                                    <h3 class="text-xl font-black sm:text-2xl">Explorasi Berita & Agenda Kampus</h3>
+                                    <p
+                                        class="mt-2 text-sm font-bold leading-relaxed text-outline-variant group-hover:text-white/80">
+                                        Jelajahi seluruh publikasi, liputan acara, dan pengumuman dari Universitas
+                                        Subang.</p>
+                                </div>
+                                <div
+                                    class="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-surface-container-lowest transition-all group-hover:scale-110 group-hover:bg-surface-container-lowest dark:group-hover:bg-secondary-fixed sm:h-16 sm:w-16">
+                                    <span
+                                        class="material-symbols-outlined text-3xl transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 dark:group-hover:text-on-surface"
+                                        aria-hidden="true">north_east</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <aside class="grid h-fit gap-5 lg:sticky lg:top-32">
+                        <div class="rounded-[1.75rem] bg-slate-950 p-6 sm:rounded-[2rem] sm:p-7 text-white"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <p class="text-base font-black uppercase tracking-[0.18em] text-secondary-fixed">Kalender Acara</p>
+                            <ul class="mt-6 space-y-4">
+                                <li class="flex gap-4"><strong class="text-secondary-fixed">12 Mei</strong><span>Seminar Karier &
+                                        Industri Rebana</span></li>
+                                <li class="flex gap-4"><strong class="text-secondary-fixed">21 Mei</strong><span>Open Campus dan
+                                        Tur Fakultas</span></li>
+                                <li class="flex gap-4"><strong class="text-secondary-fixed">04 Jun</strong><span>Workshop
+                                        Beasiswa dan PMB</span></li>
+                            </ul>
+                        </div>
+                        <div class="rounded-[1.75rem] bg-secondary-fixed p-6 sm:rounded-[2rem] sm:p-7 text-primary dark:bg-inverse-surface"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <p class="text-base font-black uppercase tracking-[0.18em] dark:text-secondary-fixed">Pengumuman PMB</p>
+                            <h3 class="mt-5 text-3xl font-black dark:text-white">Pendaftaran mahasiswa baru T.A. <span class="dark:text-secondary-fixed">2026/2027</span> telah dibuka.
+                            </h3>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="riset" class="px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+            <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+                <div class="rounded-[2.5rem] bg-primary p-8 text-white shadow-glow lg:p-10" data-aos="fade-right">
+                    <p class="text-base font-black uppercase tracking-[0.2em] text-secondary-fixed">Partnership & Career</p>
+                    <h2 class="mt-4 font-headline-lg text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">Karier,
+                        kemitraan, dan
+                        dampak untuk Subang.</h2>
+                    <p class="mt-5 text-lg text-blue-50">Kemitraan dengan BUMN, industri teknologi, pemerintah daerah,
+                        dan komunitas profesional memperkuat kredibilitas kampus di mata publik.</p>
+                    <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                        <span class="rounded-2xl bg-surface-container-lowest px-4 py-4 text-center font-black">BUMN</span>
+                        <span class="rounded-2xl bg-surface-container-lowest px-4 py-4 text-center font-black">Tech</span>
+                        <span class="rounded-2xl bg-surface-container-lowest px-4 py-4 text-center font-black">Pemda</span>
+                        <span class="rounded-2xl bg-surface-container-lowest px-4 py-4 text-center font-black">UMKM</span>
+                    </div>
+                </div>
+                <div class="rounded-[2.5rem] bg-surface-container-lowest p-8 shadow-sm dark:bg-surface-container-lowest lg:p-10" data-aos="fade-left">
+                    <p class="text-base font-black uppercase tracking-[0.2em] text-secondary">Riset & Kepatuhan</p>
+                    <h2
+                        class="mt-4 font-headline-lg text-3xl font-black leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">
+                        Data bersih untuk asesor dan mitra.</h2>
+                    <div class="mt-8 grid gap-4">
+                        <div class="rounded-3xl border border-outline-variant p-5 dark:border-outline">
+                            <h3 class="font-black text-primary dark:text-secondary-fixed">Visi-Misi dan SPMI</h3>
+                            <p class="mt-2 text-on-surface-variant dark:text-slate-300">Akses cepat ke dokumen mutu, tata kelola,
+                                dan indikator institusi.</p>
+                        </div>
+                        <div class="rounded-3xl border border-outline-variant p-5 dark:border-outline">
+                            <h3 class="font-black text-primary dark:text-secondary-fixed">Pusat Studi & Inkubator</h3>
+                            <p class="mt-2 text-on-surface-variant dark:text-slate-300">Ruang publikasi riset, pengabdian
+                                masyarakat, dan hilirisasi inovasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pmb" class="bg-slate-950 px-4 py-14 text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+                    <div data-aos="fade-right">
+                        <p class="text-base font-black uppercase tracking-[0.24em] text-secondary-fixed">Activation Energy</p>
+                        <h2 class="mt-4 font-headline-lg text-5xl font-black leading-tight sm:text-6xl">Mulai pendaftaran
+                            dalam 3 langkah.</h2>
+                        <p class="mt-5 max-w-2xl text-lg text-slate-300">Aksi utama dibuat jelas, besar, dan kontras
+                            agar calon mahasiswa dan orang tua tidak ragu memulai proses admisi.</p>
+                        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+                            <a href="#"
+                                class="rounded-full bg-secondary-fixed px-8 py-4 text-center font-black text-primary shadow-yellow transition hover:-translate-y-1">Mulai
+                                Pendaftaran</a>
+                            <a href="#kontak"
+                                class="rounded-full border border-white/20 px-8 py-4 text-center font-black text-white transition hover:-translate-y-1 hover:bg-surface-container-lowest">Konsultasi
+                                via WA</a>
+                        </div>
+                    </div>
+                    <div class="grid gap-4" data-aos="fade-left">
+                        <div class="rounded-[2rem] bg-surface-container-lowest p-6">
+                            <span class="text-4xl font-black text-secondary-fixed">01</span>
+                            <h3 class="mt-2 text-2xl font-black">Pilih fakultas dan program studi.</h3>
+                            <p class="mt-2 text-slate-300">Mulai dari minat, prospek karier, dan lokasi layanan kampus.
+                            </p>
+                        </div>
+                        <div class="rounded-[2rem] bg-surface-container-lowest p-6">
+                            <span class="text-4xl font-black text-secondary-fixed">02</span>
+                            <h3 class="mt-2 text-2xl font-black">Konsultasi jalur masuk dan beasiswa.</h3>
+                            <p class="mt-2 text-slate-300">Gunakan kontak resmi agar keluarga mendapatkan informasi yang
+                                benar.</p>
+                        </div>
+                        <div class="rounded-[2rem] bg-surface-container-lowest p-6">
+                            <span class="text-4xl font-black text-secondary-fixed">03</span>
+                            <h3 class="mt-2 text-2xl font-black">Lengkapi data dan mulai proses PMB.</h3>
+                            <p class="mt-2 text-slate-300">Proses dibuat pendek untuk mengurangi hambatan mental memulai
+                                pendaftaran.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-6 px-4 pb-4 md:grid-cols-2 sm:px-6 lg:px-8"
+            id="kontak">
+            <div class="group relative overflow-hidden rounded-3xl bg-slate-900 p-8 text-white md:p-10">
+                <div
+                    class="absolute right-0 top-0 rounded-full bg-primary/20 p-32 blur-3xl translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div class="relative z-10 flex h-full flex-col justify-between gap-8">
+                    <div>
+                        <div class="mb-4 flex items-center gap-2 text-secondary-fixed">
+                            <span class="material-symbols-outlined fill-1">location_on</span>
+                            <span class="text-base font-bold uppercase tracking-wider">Pusat Administrasi &
+                                Rektorat</span>
+                        </div>
+                        <h3 class="mb-3 text-3xl font-black">KAMPUS I</h3>
+                        <p class="max-w-md text-lg text-slate-300">Jl. Raden Ajeng Kartini KM. 3, Pasirkareumbi, Kec.
+                            Subang, Kabupaten Subang, Jawa Barat 41285</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/QuC9o9dV1PjJcyFx6" target="_blank" rel="noopener noreferrer"
+                        class="mt-4 flex w-fit items-center gap-2 border-b border-white/20 pb-1 font-bold transition-colors hover:border-accent hover:text-secondary-fixed">
+                        Lihat di Google Maps
+                        <span class="material-symbols-outlined text-base">arrow_outward</span>
+                    </a>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-3xl bg-primary p-8 text-white md:p-10">
+                <div
+                    class="absolute bottom-0 left-0 rounded-full bg-surface-container-lowest p-32 blur-3xl -translate-x-1/2 translate-y-1/2">
+                </div>
+                <div class="relative z-10 flex h-full flex-col justify-between gap-8">
+                    <div>
+                        <div class="mb-4 flex items-center gap-2 text-blue-100">
+                            <span class="material-symbols-outlined fill-1">domain</span>
+                            <span class="text-base font-bold uppercase tracking-wider">Fakultas Teknik</span>
+                        </div>
+                        <h3 class="mb-3 text-3xl font-black">KAMPUS II</h3>
+                        <p class="max-w-md text-lg text-blue-50">Jl. Arief Rahman Hakim No.8, Cigadung, Kec. Subang,
+                            Kabupaten Subang, Jawa Barat 41211</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/kKTH5sRgiXwJsxgH9" target="_blank" rel="noopener noreferrer"
+                        class="mt-4 flex w-fit items-center gap-2 border-b border-white/20 pb-1 font-bold transition-colors hover:border-white hover:text-white">
+                        Lihat di Google Maps
+                        <span class="material-symbols-outlined text-base">arrow_outward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mx-auto max-w-7xl px-4 pb-8 pt-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col gap-4 md:gap-6 px-4 xl:px-0 pb-8 pt-4 md:pt-0">
+                <!-- Bottom Bar (Copyright & Links) -->
+                <div
+                    class="border border-outline-variant bg-surface-container-lowest backdrop-blur-md shadow-sm dark:border-outline/50 dark:bg-slate-800/80 dark:backdrop-blur-xl rounded-[1.5rem] sm:rounded-[2rem] p-6 lg:px-8 lg:py-7 flex flex-col xl:flex-row items-center justify-between gap-6 lg:gap-8 text-sm text-outline dark:text-outline-variant relative z-0 mt-2 sm:mt-0 transition-colors duration-300">
+                    <!-- Left Side: Logo & Text -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left w-full xl:w-auto">
+                        <div
+                            class="p-2 sm:p-2.5 rounded-xl border border-slate-100 bg-slate-50 group hover:border-primary/30 hover:bg-surface-container-lowest dark:border-outline dark:bg-inverse-surface dark:hover:border-primary/50 dark:hover:bg-slate-800 shadow-sm transition-all duration-300 shrink-0">
+                            <img src="../../assets/logo/UniversitasSubangLogo.png" alt="Universitas Subang"
+                                class="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm dark:drop-shadow-none">
+                        </div>
+                        <div class="flex flex-col gap-1 w-full sm:w-auto flex-wrap">
+                            <span
+                                class="font-bold text-on-surface-variant dark:text-slate-200 sm:text-lg tracking-tight transition-colors">&copy;
+                                <span id="current-year">2026</span> Universitas Subang.</span>
+                            <div
+                                class="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 text-xs sm:text-sm font-medium">
+                                <a href="#"
+                                    class="text-outline dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed hover:underline underline-offset-4 decoration-primary/30 dark:decoration-accent/30 transition-all">Kebijakan
+                                    Privasi</a>
+                                <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                                <a href="#"
+                                    class="text-outline dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed hover:underline underline-offset-4 decoration-primary/30 dark:decoration-accent/30 transition-all">Syarat
+                                    & Ketentuan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Target/Socials -->
+                    <div
+                        class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-5 sm:gap-6 w-full xl:w-auto pb-4 sm:pb-0">
+                        <div
+                            class="flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded-full border border-emerald-200/60 bg-emerald-50/80 text-emerald-700 hover:bg-emerald-100/80 hover:border-emerald-300 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400 dark:hover:bg-emerald-500/20 dark:hover:border-emerald-500/30 cursor-default shadow-sm w-full sm:w-auto transition-all duration-300">
+                            <span class="text-xs sm:text-sm font-bold uppercase tracking-wide">Low-Carbon
+                                Edge Ready</span>
+                        </div>
+
+                        <div class="w-px h-8 bg-slate-200 dark:bg-slate-700 hidden sm:block transition-colors"></div>
+
+                        <div class="flex items-center justify-center gap-4 w-full sm:w-auto mt-2 sm:mt-0">
+                            <a class="w-11 h-11 flex items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest text-outline dark:border-outline dark:bg-inverse-surface dark:text-outline-variant hover:text-white hover:bg-[#E1306C] hover:border-[#E1306C] dark:hover:text-white dark:hover:bg-[#E1306C] dark:hover:border-[#E1306C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#E1306C]/30 group/soc shrink-0"
+                                href="https://www.instagram.com/universitas.subang/" target="_blank"
+                                aria-label="Instagram">
+                                <svg class="w-5 h-5 fill-current group-hover/soc:scale-110 transition-transform"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                                </svg>
+                            </a>
+                            <a class="w-11 h-11 flex items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest text-outline dark:border-outline dark:bg-inverse-surface dark:text-outline-variant hover:text-white hover:bg-[#FF0000] hover:border-[#FF0000] dark:hover:text-white dark:hover:bg-[#FF0000] dark:hover:border-[#FF0000] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#FF0000]/30 group/soc shrink-0"
+                                href="https://www.youtube.com/@universitas.subang" target="_blank" aria-label="YouTube">
+                                <svg class="w-5 h-5 fill-current group-hover/soc:scale-110 transition-transform"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                            <a class="w-11 h-11 flex items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest text-outline dark:border-outline dark:bg-inverse-surface dark:text-outline-variant hover:text-white hover:bg-[#1877F2] hover:border-[#1877F2] dark:hover:text-white dark:hover:bg-[#1877F2] dark:hover:border-[#1877F2] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#1877F2]/30 group/soc shrink-0"
+                                href="#" aria-label="Facebook">
+                                <svg class="w-5 h-5 fill-current group-hover/soc:scale-110 transition-transform"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+
+
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-on-primary-fixed mt-auto transition-colors pt-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop pb-12 max-w-container-max mx-auto border-b border-primary-fixed/20">
+            <!-- Brand Column -->
+            <div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+                <span class="font-headline-md font-bold text-on-primary dark:text-primary-fixed">Universitas Subang</span>
+                <p class="font-body-md text-on-primary/80">Membentuk Pemimpin Masa Depan melalui tradisi keunggulan akademik dan inovasi global.</p>
+            </div>
+            <!-- Links Column 1 -->
+            <div class="flex flex-col gap-3">
+                <h4 class="font-label-md text-secondary-fixed font-bold uppercase tracking-wider mb-2">Pendaftaran</h4>
+                <a class="font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200" href="#pmb">Calon Mahasiswa</a>
+                <a class="font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200" href="#pmb">Daftar Sekarang</a>
+                <a class="font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200" href="#pmb">Bantuan Keuangan</a>
+            </div>
+            <!-- Links Column 2 -->
+            <div class="flex flex-col gap-3">
+                <h4 class="font-label-md text-secondary-fixed font-bold uppercase tracking-wider mb-2">Komunitas</h4>
+                <a class="font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200" href="#student-life">Mahasiswa Aktif</a>
+                <a class="font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200" href="#fakultas">Dosen & Staf</a>
+                <a class="font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Ikatan Alumni</a>
+            </div>
+            <!-- Legal/Contact Column -->
+            <div class="flex flex-col gap-3">
+                <h4 class="font-label-md text-secondary-fixed font-bold uppercase tracking-wider mb-2">Legal & Kontak</h4>
+                <a class="font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Kebijakan Privasi</a>
+                <button onclick="openContactModal()" class="text-left font-body-md text-on-primary dark:text-primary-fixed-dim hover:text-secondary-fixed-dim transition-colors duration-200">Hubungi Kami</button>
+            </div>
+        </div>
+        <!-- Bottom Copyright -->
+        <div class="px-margin-desktop py-6 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-body-md text-on-primary/60 text-sm">
+                &copy; <span id="current-year">2026</span> Universitas Subang. Hak Cipta Dilindungi.
+            </div>
+            <!-- Socials -->
+            <div class="flex items-center gap-4">
+                <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-secondary-fixed hover:text-primary transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                </a>
+                <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-secondary-fixed hover:text-primary transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Setup Theme Toggle
+        const root = document.documentElement;
+        const storedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (storedTheme === "dark" || (!storedTheme && prefersDark)) root.classList.add("dark");
+
+        function toggleTheme() {
+            root.classList.toggle("dark");
+            localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
+        }
+        
+        document.getElementById("mobile-theme-toggle").addEventListener("click", () => {
+            toggleTheme();
+            closePreferences();
+        });
+
+        // Page Loader
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("page-loader");
+            if (loader) {
+                loader.classList.add("opacity-0", "pointer-events-none");
+                setTimeout(() => loader.remove(), 600);
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({ duration: 700, once: true, offset: 80 });
+
+        // Modals & Menus
+        const mobileMenuButton = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const preferencesButton = document.getElementById("preferences-btn");
+        const preferencesMenu = document.getElementById("preferences-menu");
+
+        function closeMenu() {
+            mobileMenu.classList.add("hidden");
+            menuIcon.textContent = "menu";
+        }
+        function closePreferences() {
+            preferencesMenu.classList.add("hidden");
+        }
+
+        mobileMenuButton.addEventListener("click", () => {
+            const isHidden = mobileMenu.classList.toggle("hidden");
+            menuIcon.textContent = isHidden ? "menu" : "close";
+            if (!isHidden) closePreferences();
+        });
+
+        preferencesButton.addEventListener("click", () => {
+            const isHidden = preferencesMenu.classList.toggle("hidden");
+            if (!isHidden) closeMenu();
+        });
+
+        // Search Modal
+        const searchOpenButton = document.getElementById("search-open-btn");
+        const searchModal = document.getElementById("search-modal");
+        const searchCloseButton = document.getElementById("search-close-btn");
+        const searchInput = document.getElementById("search-input");
+        const searchSubmitButton = document.getElementById("search-submit-btn");
+        const searchChips = document.querySelectorAll(".search-chip");
+
+        function openSearchModal() {
+            closeMenu();
+            closePreferences();
+            searchModal.classList.remove("hidden");
+            setTimeout(() => searchInput.focus(), 100);
+        }
+
+        function closeSearchModal() {
+            searchModal.classList.add("hidden");
+        }
+
+        searchOpenButton.addEventListener("click", openSearchModal);
+        searchCloseButton.addEventListener("click", closeSearchModal);
+        searchModal.addEventListener("click", (event) => {
+            if (event.target === searchModal) closeSearchModal();
+        });
+
+        function runSearch(keywordRaw) {
+            const keyword = keywordRaw.trim().toLowerCase();
+            if (!keyword) return;
+
+            const searchTargets = [
+                { keywords: ["pmb", "pendaftaran", "admisi", "beasiswa", "biaya"], target: "#pmb" },
+                { keywords: ["fakultas", "prodi", "teknik", "hukum", "fasilkom", "fikom", "fkip"], target: "#fakultas" },
+                { keywords: ["akreditasi", "mutu", "dokumen mutu"], target: "#trust" },
+                { keywords: ["jadwal", "berita", "pengumuman", "event", "acara", "kampus"], target: "#news" },
+                { keywords: ["kemitraan", "riset", "tracer", "industri", "inovasi"], target: "#riset" },
+                { keywords: ["mahasiswa", "organisasi", "kehidupan"], target: "#student-life" },
+                { keywords: ["kontak", "alamat", "wa", "bantuan"], target: "#kontak" }
+            ];
+
+            const found = searchTargets.find((item) => item.keywords.some((token) => keyword.includes(token)));
+            const target = found ? found.target : "#beranda";
+            closeSearchModal();
+            window.location.hash = target;
+        }
+
+        searchSubmitButton.addEventListener("click", () => runSearch(searchInput.value));
+        searchInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                runSearch(searchInput.value);
+            }
+            if (event.key === "Escape") closeSearchModal();
+        });
+        searchChips.forEach((chip) => {
+            chip.addEventListener("click", () => {
+                const keyword = chip.dataset.keyword || "";
+                searchInput.value = keyword;
+                runSearch(keyword);
+            });
+        });
+
+        // Contact Modal
+        function openContactModal() {
+            document.getElementById("contact-modal").classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        }
+        function closeContactModal() {
+            document.getElementById("contact-modal").classList.add("hidden");
+            document.body.style.overflow = "";
+        }
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeSearchModal();
+                closePreferences();
+                closeContactModal();
+            }
+        });
+        document.addEventListener("click", (event) => {
+            if (!preferencesMenu.contains(event.target) && !preferencesButton.contains(event.target)) {
+                closePreferences();
+            }
+        });
+
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+
+        // Typewriter Effect for Hero
+        const text1 = document.getElementById("typewriter-text-1");
+        const text2 = document.getElementById("typewriter-text-2");
+        const cursor1 = document.getElementById("cursor-1");
+        const cursor2 = document.getElementById("cursor-2");
+
+        if (text1 && text2) {
+            const phrases = [
+                { line1: "Membentuk Pemimpin Masa Depan", line2: "di Universitas Subang." },
+                { line1: "Wujudkan Mimpimu", line2: "bersama talenta terbaik." },
+                { line1: "Raih Prestasi Gemilang", line2: "melalui inovasi nyata." },
+                { line1: "Bangun Karier Cemerlang", line2: "di ekosistem dinamis." },
+                { line1: "Perluas Wawasanmu", line2: "dengan koneksi global." }
+            ];
+
+            let pIdx = 0, cIdx1 = 0, cIdx2 = 0, isDeleting = false;
+
+            function type() {
+                const current = phrases[pIdx];
+                let typingSpeed = isDeleting ? 30 : 60;
+
+                if (isDeleting) {
+                    if (cIdx2 > 0) {
+                        cIdx2--;
+                        text2.textContent = current.line2.substring(0, cIdx2);
+                        cursor1.classList.add("hidden");
+                        cursor2.classList.remove("hidden");
+                    } else if (cIdx1 > 0) {
+                        cIdx1--;
+                        text1.textContent = current.line1.substring(0, cIdx1);
+                        cursor1.classList.remove("hidden");
+                        cursor2.classList.add("hidden");
+                    } else {
+                        isDeleting = false;
+                        pIdx = (pIdx + 1) % phrases.length;
+                        typingSpeed = 500;
+                    }
+                } else {
+                    if (cIdx1 < current.line1.length) {
+                        cIdx1++;
+                        text1.textContent = current.line1.substring(0, cIdx1);
+                        cursor1.classList.remove("hidden");
+                        cursor2.classList.add("hidden");
+                    } else if (cIdx2 < current.line2.length) {
+                        cIdx2++;
+                        text2.textContent = current.line2.substring(0, cIdx2);
+                        cursor1.classList.add("hidden");
+                        cursor2.classList.remove("hidden");
+                    } else {
+                        isDeleting = true;
+                        typingSpeed = 4000;
+                        cursor1.classList.add("hidden");
+                        cursor2.classList.remove("hidden");
+                    }
+                }
+                setTimeout(type, typingSpeed);
+            }
+            setTimeout(type, 1000);
+        }
+    </script>
+</body>
+</html>
