@@ -307,8 +307,12 @@
     <header class="bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-sm border-b border-outline-variant dark:border-outline sticky top-0 z-50 transition-colors">
         <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
             <!-- Brand Logo -->
-            <a class="font-headline-md font-bold text-primary dark:text-primary-fixed" href="#beranda">
-                Universitas Subang
+            <a class="flex items-center gap-3" href="#beranda">
+                <img src="assets/logo/UniversitasSubangLogo.png" alt="Logo Universitas Subang" class="h-12 w-auto">
+                <div class="flex flex-col">
+                    <span class="font-headline-md font-bold text-primary dark:text-primary-fixed leading-tight">Universitas Subang</span>
+                    <span class="text-xs font-medium text-outline dark:text-outline-variant">School of Empowering People</span>
+                </div>
             </a>
             <!-- Trailing Actions (Search + Preferences + Menu) -->
             <div class="flex items-center gap-4 ml-auto">
@@ -330,7 +334,7 @@
         <!-- Hero Section with Typewriter -->
         <section id="beranda" class="relative w-full h-[600px] flex items-center bg-surface-container-high overflow-hidden" data-aos="fade-in">
             <div class="absolute inset-0 w-full h-full">
-                <div class="bg-cover bg-center w-full h-full opacity-40 mix-blend-multiply" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHQxLrIVGEF_lebxEavQfZ7zI3GRA9uoPb91dcoPSdSeson7-O_3J1GaSjYByfkYqwrAIfQ3tT7tRJSfMpEBU7xCeA6MESKX5Enmyb5EmUHE_nk8AQdmD5DF4ZbbWitzlh_camZGHtb7WuScM35MQdscNwr7sHlEP-i31BIyYZYj3Y7hCLpe8egd4Cd6TCg9E4IccTwllb_OpR2xljXSwUFK1dGv3FleDtBwL9xsOwlm8ybMaAWhC_AQ')"></div>
+                <div class="bg-cover bg-center w-full h-full opacity-40 mix-blend-multiply" style="background-image: url('assets/images/kampus1.png')"></div>
                 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent dark:from-inverse-surface dark:via-inverse-surface/90"></div>
             </div>
             <div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
@@ -462,7 +466,7 @@
             <div class="flex flex-col md:flex-row gap-12 items-center">
                 <div class="w-full md:w-1/2" data-aos="fade-right">
                     <div class="aspect-video bg-surface-container rounded-xl overflow-hidden border border-outline-variant shadow-sm relative">
-                        <img src="https://picsum.photos/seed/unsub-riset/800/600" alt="Riset Unsub" class="w-full h-full object-cover">
+                        <img src="assets/images/kampus1.png" alt="Riset Unsub" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
                     </div>
                 </div>
@@ -493,7 +497,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-[600px]">
                     <!-- Large Box -->
                     <div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group border border-outline-variant" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://picsum.photos/seed/unsub-campus-1/1200/800" alt="Kampus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img src="assets/images/kampus2.png" alt="Kampus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-8 text-white">
                             <span class="bg-primary/90 px-3 py-1 rounded text-xs font-bold mb-3 inline-block">Fasilitas</span>
@@ -503,7 +507,7 @@
                     </div>
                     <!-- Small Box 1 -->
                     <div class="relative rounded-2xl overflow-hidden group border border-outline-variant" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://picsum.photos/seed/unsub-campus-2/600/400" alt="Organisasi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img src="assets/images/kampus1.png" alt="Organisasi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white">
                             <span class="bg-secondary/90 px-3 py-1 rounded text-xs font-bold mb-2 inline-block">BEM</span>
@@ -512,7 +516,7 @@
                     </div>
                     <!-- Small Box 2 -->
                     <div class="relative rounded-2xl overflow-hidden group border border-outline-variant" data-aos="fade-up" data-aos-delay="300">
-                        <img src="https://picsum.photos/seed/unsub-campus-3/600/400" alt="Olahraga" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img src="assets/images/kampus2.png" alt="Olahraga" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white">
                             <span class="bg-tertiary/90 px-3 py-1 rounded text-xs font-bold mb-2 inline-block">UKM Olahraga</span>
@@ -534,7 +538,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                 <!-- News Card 1 -->
                 <article data-aos="fade-up" data-aos-delay="100" class="bg-surface-container-lowest dark:bg-surface-container-high border border-outline-variant dark:border-outline flex flex-col group rounded-xl overflow-hidden shadow-sm">
-                    <div class="bg-cover bg-center w-full h-48 border-b border-outline-variant dark:border-outline" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvcJZyb0-eOvnSaEAfCDOTOtjn_VzzeVR9t4OxfwqHtjYyX8isEe1-HawhRWjV5DN4HxuOvdJfKpoMHK31S_rt8otOnFx-y2IOc9jC05UlmkHZuTgtUtTGX6GxVmgoIrXy82ZTkXNO_545n_aFp3Rxj-EfKxvwfkF_L7nf-MUvrLi0Elr5lVP0IlK_WbM0HIHp17bEYnSVhXfvfWzjpOedsrgYZDHUy_TmzY8KP2EcZ04_1cxnmOChGA')"></div>
+                    <div class="bg-cover bg-center w-full h-48 border-b border-outline-variant dark:border-outline" style="background-image: url('assets/images/kampus1.png')"></div>
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="font-label-sm text-tertiary dark:text-tertiary-fixed mb-3 tracking-widest uppercase">Riset</span>
                         <h3 class="font-headline-md text-primary dark:text-primary-fixed mb-3 group-hover:text-secondary transition-colors line-clamp-2">
@@ -548,7 +552,7 @@
                 </article>
                 <!-- News Card 2 -->
                 <article data-aos="fade-up" data-aos-delay="200" class="bg-surface-container-lowest dark:bg-surface-container-high border border-outline-variant dark:border-outline flex flex-col group rounded-xl overflow-hidden shadow-sm">
-                    <div class="bg-cover bg-center w-full h-48 border-b border-outline-variant dark:border-outline" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdfI2itpbb6awxaxpD3xLUECCMskMQaNVIZIqrxgNgt0RB_WVBnn3xjP3yEEBoqNmUtbpSBDPj9PWsSk9Zpq3j17D9yCuvenTUAJLbc18IxHJSLV8bUz3h77gcSaNM9cjAceiakw1ER6n7rHy22fE82XtMCxLmZ4wW_gPoPYBNno1LhQwrv2ZRNPtnNb9bW8UB0ONSEzNms3fCWPR_LGBUrz0xpKA2N1UM96o7Q7ZKWk2idSFL57DGVA')"></div>
+                    <div class="bg-cover bg-center w-full h-48 border-b border-outline-variant dark:border-outline" style="background-image: url('assets/images/kampus2.png')"></div>
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="font-label-sm text-tertiary dark:text-tertiary-fixed mb-3 tracking-widest uppercase">Seminar</span>
                         <h3 class="font-headline-md text-primary dark:text-primary-fixed mb-3 group-hover:text-secondary transition-colors line-clamp-2">
@@ -562,7 +566,7 @@
                 </article>
                 <!-- News Card 3 -->
                 <article data-aos="fade-up" data-aos-delay="300" class="bg-surface-container-lowest dark:bg-surface-container-high border border-outline-variant dark:border-outline flex flex-col group rounded-xl overflow-hidden shadow-sm">
-                    <div class="bg-cover bg-center w-full h-48 border-b border-outline-variant dark:border-outline" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGNZNI8FFYCtg30WoF5gSMoWg4MxlOFal2UVftCVlWTwGRNC8j8WXFAAbD9Dqi3oJMNpCf8j2BblZE9U6ScUslEt2juPbpFAPsjCeT_Pjttoscgux4Mxw_v5q_nwACT-wzKZG0zswxEXmStl35YLZESiCrhIKurTlBNGpvm8pg_7JSBav_KiPum-sO-PuSRjXLdi0mzFt8QXTRD6LItRBAe2wcMYG-wv40owlUWzjEIpAOY-wP_zd1JQ')"></div>
+                    <div class="bg-cover bg-center w-full h-48 border-b border-outline-variant dark:border-outline" style="background-image: url('assets/images/kampus1.png')"></div>
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="font-label-sm text-tertiary dark:text-tertiary-fixed mb-3 tracking-widest uppercase">Kehidupan Kampus</span>
                         <h3 class="font-headline-md text-primary dark:text-primary-fixed mb-3 group-hover:text-secondary transition-colors line-clamp-2">
