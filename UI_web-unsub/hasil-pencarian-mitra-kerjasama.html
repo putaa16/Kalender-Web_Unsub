@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Kalender Akademik - Universitas Subang</title>
+    <title>Hasil Pencarian: Mitra Kerja - Universitas Subang</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet"/>
@@ -50,9 +50,6 @@
         .nav-link:hover::after, .nav-link.active::after {
             width: 100%;
         }
-        .table-row-hover:hover td {
-            background-color: #f4f5f7;
-        }
         /* Transparent Header styles for Hero */
         .hero-overlay {
             background: linear-gradient(to right, rgba(0, 43, 92, 0.9) 0%, rgba(0, 43, 92, 0.4) 100%);
@@ -73,7 +70,7 @@
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-surface-variant text-on-surface font-sans antialiased flex flex-col min-h-screen">
 
     <!-- Utility Nav (Top Bar) -->
     <div class="bg-primary text-white text-xs font-medium py-2 hidden md:block">
@@ -151,7 +148,7 @@
                     <a href="kalender-akademik.html">Kalender Akademik</a>
                     <a href="hasil-pencarian-fasilitas-kampus.html">Fasilitas Kampus</a>
                     <a href="hasil-pencarian-kisah-sukses-alumni.html">Kisah Sukses Alumni</a>
-                    <a href="hasil-pencarian-mitra-kerjasama.html">Mitra Kerja Sama</a>
+                    <a href="hasil-pencarian-mitra-kerjasama.html">Mitra KerjaSama</a>
                 </div>
             </div>
             <a href="index.html#riset" class="border-b border-white/10 pb-2">Penelitian</a>
@@ -160,158 +157,86 @@
         </div>
     </div>
 
-    <main class="flex-grow bg-surface-variant py-12">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Breadcrumb -->
-            <div class="flex items-center gap-2 text-sm text-on-surface-variant mb-8" data-aos="fade-right">
-                <a href="index.html" class="hover:text-primary transition-colors">Beranda</a>
-                <span class="material-symbols-outlined text-sm">chevron_right</span>
-                <a href="fakultas-gateway.html" class="hover:text-primary transition-colors">Fakultas</a>
-                <span class="material-symbols-outlined text-sm">chevron_right</span>
-                <span class="text-primary font-medium">Kalender Akademik</span>
-            </div>
-
-            <!-- Page Title -->
-            <div class="mb-10" data-aos="fade-up">
-                <h1 class="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">Kalender Akademik</h1>
-                <p class="text-lg text-on-surface-variant max-w-3xl">Jadwal kegiatan akademik, registrasi, ujian, dan hari libur resmi Universitas Subang untuk Tahun Akademik 2026/2027.</p>
-            </div>
-
-            <!-- Actions / Filters -->
-            <div class="flex flex-wrap justify-between items-center gap-4 mb-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex gap-2 bg-white rounded-md shadow-sm p-1 border border-border">
-                    <button class="px-4 py-2 bg-primary text-white text-sm font-medium rounded transition-colors">Semester Ganjil</button>
-                    <button class="px-4 py-2 bg-transparent text-on-surface-variant hover:bg-surface-variant text-sm font-medium rounded transition-colors">Semester Genap</button>
-                </div>
-                <div class="flex gap-3">
-                    <button class="flex items-center gap-2 px-4 py-2 bg-white border border-border text-primary font-medium text-sm rounded shadow-sm hover:bg-surface-variant transition-colors">
-                        <span class="material-symbols-outlined text-[18px]">print</span> Cetak
-                    </button>
-                    <button class="flex items-center gap-2 px-4 py-2 bg-primary text-white font-medium text-sm rounded shadow-sm hover:bg-primary-hover transition-colors">
-                        <span class="material-symbols-outlined text-[18px]">download</span> Unduh PDF
+    <main class="flex-grow py-12">
+        <div class="max-w-5xl mx-auto px-6">
+            
+            <!-- Search Header -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-border mb-12" data-aos="fade-up">
+                <h1 class="font-serif text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Hasil Pencarian</h1>
+                <div class="flex flex-col md:flex-row gap-4 w-full">
+                    <div class="relative flex-grow">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                            <span class="material-symbols-outlined text-primary">search</span>
+                        </div>
+                        <input type="search" value="Mitra Kerja Sama" class="w-full h-full rounded-md border border-border bg-surface-variant py-3 pl-12 pr-4 text-on-surface focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Masukkan kata kunci pencarian..." />
+                    </div>
+                    <button class="bg-primary text-white px-8 py-3 rounded-md font-medium hover:bg-primary-hover transition-colors flex items-center justify-center gap-2">
+                        <span>Cari</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Table Container -->
-            <div class="bg-white rounded-xl shadow-sm border border-border overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                <!-- Semester Header -->
-                <div class="bg-primary px-6 py-4 border-b border-primary-hover">
-                    <h2 class="text-white font-serif font-bold text-xl">Semester Ganjil 2026/2027</h2>
-                </div>
+            <!-- Search Results -->
+            <div class="space-y-6">
                 
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse min-w-[600px]">
-                        <thead>
-                            <tr class="bg-surface-variant text-on-surface-variant text-sm font-bold uppercase tracking-wider border-b border-border">
-                                <th class="px-6 py-4 w-1/4">Tanggal</th>
-                                <th class="px-6 py-4 w-2/4">Kegiatan</th>
-                                <th class="px-6 py-4 w-1/4">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-on-surface divide-y divide-border">
-                            <!-- Registration Phase -->
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">1 - 15 Agustus 2026</td>
-                                <td class="px-6 py-4 text-sm font-bold">Pembayaran BPP dan Pengisian FRS</td>
-                                <td class="px-6 py-4 text-sm text-on-surface-variant">Melalui Portal Mahasiswa</td>
-                            </tr>
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">17 - 21 Agustus 2026</td>
-                                <td class="px-6 py-4 text-sm font-bold">Masa Perubahan FRS (Add/Drop)</td>
-                                <td class="px-6 py-4 text-sm text-on-surface-variant">Persetujuan Dosen Wali</td>
-                            </tr>
-                            
-                            <!-- Introduction Phase -->
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-secondary bg-secondary/5">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">24 - 28 Agustus 2026</td>
-                                <td class="px-6 py-4 text-sm font-bold text-primary">Penerimaan Mahasiswa Baru (PMB)</td>
-                                <td class="px-6 py-4 text-sm text-on-surface-variant">Wajib bagi Maba</td>
-                            </tr>
-                            
-                            <!-- Lectures Phase -->
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">31 Agustus 2026</td>
-                                <td class="px-6 py-4 text-sm font-bold">Hari Pertama Perkuliahan</td>
-                                <td class="px-6 py-4 text-sm text-on-surface-variant">Sesuai Jadwal Kuliah</td>
-                            </tr>
-                            
-                            <!-- Exams Phase -->
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-red-500 bg-red-50">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">19 - 30 Oktober 2026</td>
-                                <td class="px-6 py-4 text-sm font-bold text-red-700">Ujian Tengah Semester (UTS)</td>
-                                <td class="px-6 py-4 text-sm text-red-600">Minggu ke-8 & 9</td>
-                            </tr>
-                            
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">18 Desember 2026</td>
-                                <td class="px-6 py-4 text-sm font-bold">Batas Akhir Perkuliahan Ganjil</td>
-                                <td class="px-6 py-4 text-sm text-on-surface-variant">Minggu ke-16</td>
-                            </tr>
-                            
-                            <!-- Final Exams Phase -->
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-red-500 bg-red-50">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">4 - 15 Januari 2027</td>
-                                <td class="px-6 py-4 text-sm font-bold text-red-700">Ujian Akhir Semester (UAS)</td>
-                                <td class="px-6 py-4 text-sm text-red-600">Wajib membawa Kartu Ujian</td>
-                            </tr>
-                            
-                            <!-- Grades Phase -->
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">22 Januari 2027</td>
-                                <td class="px-6 py-4 text-sm font-bold">Batas Akhir Input Nilai oleh Dosen</td>
-                                <td class="px-6 py-4 text-sm text-on-surface-variant">SIAKAD ditutup 23:59 WIB</td>
-                            </tr>
-                            <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">25 Januari 2027</td>
-                                <td class="px-6 py-4 text-sm font-bold">Pengumuman Nilai (KHS)</td>
-                                <td class="px-6 py-4 text-sm text-on-surface-variant">Dapat diakses di Portal</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Result 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-border hover:border-primary transition-colors group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-48 h-32 bg-primary/10 flex items-center justify-center text-primary rounded shrink-0">
+                            <span class="material-symbols-outlined text-4xl">work</span>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Karir & Kerja</span>
+                            <h3 class="font-serif text-xl font-bold text-primary mb-2 group-hover:text-primary-hover transition-colors"><a href="#">Direktori Perusahaan Mitra Kerja MBKM</a></h3>
+                            <p class="text-on-surface-variant text-sm mb-4">Daftar lengkap 50+ perusahaan nasional dan multinasional yang bekerja sama dengan Universitas Subang dalam program Merdeka Belajar Kampus Merdeka (MBKM) untuk penempatan mahasiswa Kerja.</p>
+                            <a href="#" class="text-primary font-bold text-sm flex items-center gap-1 hover:text-secondary transition-colors">Baca selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="bg-surface-variant px-6 py-4 border-t border-border flex justify-between items-center text-sm text-on-surface-variant">
-                    <span>Terakhir diperbarui: 15 Juli 2026</span>
-                    <a href="#" class="text-primary font-bold hover:underline">Sampaikan Masukan</a>
+
+                <!-- Result 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-border hover:border-primary transition-colors group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-48 h-32 bg-primary/10 flex items-center justify-center text-primary rounded shrink-0">
+                            <span class="material-symbols-outlined text-4xl">description</span>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Dokumen</span>
+                            <h3 class="font-serif text-xl font-bold text-primary mb-2 group-hover:text-primary-hover transition-colors"><a href="#">Panduan Pengajuan Kerja Mandiri ke Perusahaan Mitra</a></h3>
+                            <p class="text-on-surface-variant text-sm mb-4">Buku panduan lengkap (PDF) berisi prosedur, syarat administrasi, dan format surat pengantar resmi dari fakultas untuk melamar program Kerja mandiri.</p>
+                            <a href="#" class="text-primary font-bold text-sm flex items-center gap-1 hover:text-secondary transition-colors">Unduh Dokumen <span class="material-symbols-outlined text-sm">download</span></a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Result 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-border hover:border-primary transition-colors group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-48 h-32 bg-primary/10 flex items-center justify-center text-primary rounded shrink-0">
+                            <span class="material-symbols-outlined text-4xl">handshake</span>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Berita</span>
+                            <h3 class="font-serif text-xl font-bold text-primary mb-2 group-hover:text-primary-hover transition-colors"><a href="detail-artikel-berita.html">MoU dengan Perusahaan Multinasional untuk Program Kerja Khusus</a></h3>
+                            <p class="text-on-surface-variant text-sm mb-4">Membuka peluang karir global bagi lulusan dengan program penempatan langsung di perusahaan teknologi terkemuka di kawasan Asia Tenggara.</p>
+                            <a href="detail-artikel-berita.html" class="text-primary font-bold text-sm flex items-center gap-1 hover:text-secondary transition-colors">Baca selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Notes Section -->
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-white p-6 rounded-xl border border-border shadow-sm">
-                    <h3 class="font-serif font-bold text-primary text-xl mb-4 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-secondary">info</span> Informasi Penting
-                    </h3>
-                    <ul class="list-disc pl-5 space-y-2 text-on-surface-variant text-sm">
-                        <li>Mahasiswa yang tidak melakukan pengisian FRS hingga batas waktu yang ditentukan akan dianggap Cuti Akademik.</li>
-                        <li>Jadwal sewaktu-waktu dapat berubah sesuai dengan kebijakan Rektorat. Perubahan akan diinformasikan melalui Portal Mahasiswa.</li>
-                        <li>Keterlambatan pembayaran BPP akan dikenakan sanksi sesuai dengan peraturan keuangan universitas.</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border shadow-sm">
-                    <h3 class="font-serif font-bold text-primary text-xl mb-4 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-secondary">event_note</span> Hari Libur Nasional
-                    </h3>
-                    <ul class="space-y-3 text-on-surface-variant text-sm">
-                        <li class="flex justify-between border-b border-border pb-2">
-                            <span>Hari Kemerdekaan RI</span>
-                            <span class="font-medium text-on-surface">17 Agustus 2026</span>
-                        </li>
-                        <li class="flex justify-between border-b border-border pb-2">
-                            <span>Maulid Nabi Muhammad SAW</span>
-                            <span class="font-medium text-on-surface">28 September 2026</span>
-                        </li>
-                        <li class="flex justify-between border-b border-border pb-2">
-                            <span>Hari Raya Natal</span>
-                            <span class="font-medium text-on-surface">25 Desember 2026</span>
-                        </li>
-                        <li class="flex justify-between pb-1">
-                            <span>Tahun Baru Masehi</span>
-                            <span class="font-medium text-on-surface">1 Januari 2027</span>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Pagination -->
+            <div class="mt-10 flex justify-center" data-aos="fade-up">
+                <nav class="flex items-center gap-2">
+                    <button class="w-10 h-10 flex items-center justify-center rounded border border-border text-on-surface-variant hover:bg-surface hover:text-primary transition-colors" disabled>
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center rounded bg-primary text-white font-medium">1</button>
+                    <button class="w-10 h-10 flex items-center justify-center rounded border border-border bg-white text-on-surface-variant hover:border-primary hover:text-primary transition-colors disabled:opacity-50" disabled>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </nav>
             </div>
 
         </div>
